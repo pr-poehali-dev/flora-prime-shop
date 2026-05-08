@@ -13,24 +13,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 330 15% 12%;
 
-    --primary: 340 80% 55%;
+    --primary: 150 60% 22%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 280 60% 60%;
+    --secondary: 140 40% 35%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 330 20% 96%;
-    --muted-foreground: 330 10% 50%;
+    --muted: 140 20% 95%;
+    --muted-foreground: 140 10% 45%;
 
-    --accent: 20 100% 65%;
+    --accent: 80 60% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 330 20% 90%;
-    --input: 330 20% 90%;
-    --ring: 340 80% 55%;
+    --border: 140 20% 88%;
+    --input: 140 20% 88%;
+    --ring: 150 60% 22%;
 
     --radius: 1rem;
 
@@ -44,16 +44,16 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* FloraPrime brand */
-    --flora-coral: #ff6b8a;
-    --flora-pink: #ff4d7d;
-    --flora-purple: #9b59b6;
-    --flora-violet: #6c3fde;
-    --flora-orange: #ff8c42;
-    --flora-dark: #1a0a12;
-    --flora-light: #fff5f8;
-    --grad-main: linear-gradient(135deg, #ff6b8a 0%, #9b59b6 50%, #6c3fde 100%);
-    --grad-warm: linear-gradient(135deg, #ff8c42 0%, #ff6b8a 100%);
-    --grad-cool: linear-gradient(135deg, #9b59b6 0%, #6c3fde 100%);
+    --flora-coral: #2d6a4f;
+    --flora-pink: #1b4332;
+    --flora-purple: #40916c;
+    --flora-violet: #1b4332;
+    --flora-orange: #74c69d;
+    --flora-dark: #081c15;
+    --flora-light: #f0faf4;
+    --grad-main: linear-gradient(135deg, #2d6a4f 0%, #40916c 50%, #74c69d 100%);
+    --grad-warm: linear-gradient(135deg, #74c69d 0%, #2d6a4f 100%);
+    --grad-cool: linear-gradient(135deg, #1b4332 0%, #40916c 100%);
   }
 }
 
@@ -102,7 +102,7 @@
 
   .card-hover:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 60px rgba(255, 107, 138, 0.2);
+    box-shadow: 0 20px 60px rgba(45, 106, 79, 0.2);
   }
 
   .glass {
@@ -112,7 +112,7 @@
   }
 
   .glass-dark {
-    background: rgba(26, 10, 18, 0.7);
+    background: rgba(8, 28, 21, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
@@ -126,7 +126,7 @@
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(255, 107, 138, 0.4);
+    box-shadow: 0 12px 30px rgba(45, 106, 79, 0.4);
   }
 
   .section-pad {

@@ -119,7 +119,7 @@ const Index = () => {
     <div className="min-h-screen font-golos" style={{ background: "#FFFAF8" }}>
 
       {/* NAVBAR */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-pink-100">
+      <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
             <span className="text-2xl">🌸</span>
@@ -134,7 +134,7 @@ const Index = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   activeSection === item
                     ? "grad-main text-white shadow-md"
-                    : "text-gray-600 hover:text-pink-500 hover:bg-pink-50"
+                    : "text-gray-600 hover:text-green-700 hover:bg-green-50"
                 }`}
               >
                 {item}
@@ -162,9 +162,9 @@ const Index = () => {
         </div>
 
         {mobileMenu && (
-          <div className="md:hidden glass border-t border-pink-100 px-4 py-3 flex flex-col gap-1">
+          <div className="md:hidden glass border-t border-green-100 px-4 py-3 flex flex-col gap-1">
             {NAV.map((item) => (
-              <button key={item} onClick={() => scrollTo(item)} className="text-left px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-pink-50 hover:text-pink-500">
+              <button key={item} onClick={() => scrollTo(item)} className="text-left px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-green-50 hover:text-green-700">
                 {item}
               </button>
             ))}
@@ -176,11 +176,11 @@ const Index = () => {
       <section id="Главная" className="relative min-h-screen flex items-center overflow-hidden pt-16">
         <div className="absolute inset-0">
           <img src={HERO_IMG} alt="Цветы" className="w-full h-full object-cover" />
-          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(26,10,18,0.75) 0%, rgba(155,89,182,0.5) 50%, rgba(255,107,138,0.3) 100%)" }} />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(8,28,21,0.82) 0%, rgba(27,67,50,0.6) 50%, rgba(64,145,108,0.35) 100%)" }} />
         </div>
 
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full opacity-20 animate-float" style={{ background: "radial-gradient(circle, #FF6B8A, transparent)" }} />
-        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 rounded-full opacity-10 animate-float animate-delay-300" style={{ background: "radial-gradient(circle, #9B59B6, transparent)" }} />
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 rounded-full opacity-20 animate-float" style={{ background: "radial-gradient(circle, #40916c, transparent)" }} />
+        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 rounded-full opacity-10 animate-float animate-delay-300" style={{ background: "radial-gradient(circle, #74c69d, transparent)" }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-20">
           <div className="max-w-2xl">
@@ -191,7 +191,7 @@ const Index = () => {
 
             <h1 className="font-display text-6xl sm:text-7xl lg:text-8xl font-light text-white leading-none mb-6">
               Цветы,<br />
-              <em className="not-italic font-bold" style={{ color: "#FF6B8A" }}>созданные</em><br />
+              <em className="not-italic font-bold" style={{ color: "#74c69d" }}>созданные</em><br />
               для вас
             </h1>
 
@@ -244,7 +244,7 @@ const Index = () => {
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   filter === f
                     ? "grad-main text-white shadow-md"
-                    : "bg-white text-gray-600 hover:text-pink-500 border border-pink-100 hover:border-pink-300"
+                    : "bg-white text-gray-600 hover:text-green-700 border border-green-100 hover:border-green-300"
                 }`}
               >
                 {f}
@@ -254,7 +254,7 @@ const Index = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.map((product) => (
-              <div key={product.id} className={`card-hover rounded-3xl overflow-hidden bg-gradient-to-br ${product.color} border border-white shadow-sm`}>
+              <div key={product.id} className="card-hover rounded-3xl overflow-hidden bg-white border border-green-50 shadow-sm">
                 <div className="flex items-center justify-center h-48 text-8xl">
                   {product.emoji}
                 </div>
@@ -286,10 +286,10 @@ const Index = () => {
       </section>
 
       {/* ABOUT */}
-      <section id="О нас" className="section-pad relative overflow-hidden" style={{ background: "linear-gradient(135deg, #1A0A12 0%, #2D1B40 100%)" }}>
+      <section id="О нас" className="section-pad relative overflow-hidden" style={{ background: "linear-gradient(135deg, #081c15 0%, #1b4332 100%)" }}>
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full" style={{ background: "radial-gradient(circle, #FF6B8A, transparent)" }} />
-          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full" style={{ background: "radial-gradient(circle, #9B59B6, transparent)" }} />
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full" style={{ background: "radial-gradient(circle, #74c69d, transparent)" }} />
+          <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full" style={{ background: "radial-gradient(circle, #40916c, transparent)" }} />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -332,7 +332,7 @@ const Index = () => {
       </section>
 
       {/* DELIVERY */}
-      <section id="Доставка" className="section-pad" style={{ background: "var(--flora-light)" }}>
+      <section id="Доставка" className="section-pad" style={{ background: "#f0faf4" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-sm font-medium uppercase tracking-widest mb-3" style={{ color: "var(--flora-coral)" }}>Быстро и надёжно</p>
@@ -344,7 +344,7 @@ const Index = () => {
               { emoji: "📅", title: "Стандарт", time: "2–4 часа", price: "150 ₽", desc: "Выберите удобный временной слот" },
               { emoji: "🎁", title: "Бесплатно", time: "При заказе от 3000 ₽", price: "0 ₽", desc: "Доставляем с улыбкой и любовью" },
             ].map(({ emoji, title, time, price, desc }) => (
-              <div key={title} className="bg-white rounded-3xl p-8 shadow-sm border border-pink-50 card-hover text-center">
+              <div key={title} className="bg-white rounded-3xl p-8 shadow-sm border border-green-50 card-hover text-center">
                 <div className="text-5xl mb-4">{emoji}</div>
                 <h3 className="font-display text-2xl font-bold text-gray-900 mb-2">{title}</h3>
                 <div className="text-3xl font-bold grad-text mb-1">{price}</div>
@@ -387,7 +387,7 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {REVIEWS.map(({ name, text, stars, emoji }) => (
-              <div key={name} className="bg-white rounded-3xl p-8 shadow-sm border border-pink-50 card-hover">
+              <div key={name} className="bg-white rounded-3xl p-8 shadow-sm border border-green-50 card-hover">
                 <div className="text-3xl mb-4">{emoji}</div>
                 <div className="flex mb-4">
                   {Array.from({ length: stars }).map((_, i) => (
@@ -403,7 +403,7 @@ const Index = () => {
       </section>
 
       {/* CONTACTS */}
-      <section id="Контакты" className="section-pad" style={{ background: "linear-gradient(135deg, #FF6B8A10, #9B59B610)" }}>
+      <section id="Контакты" className="section-pad" style={{ background: "linear-gradient(135deg, #2d6a4f12, #74c69d12)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-sm font-medium uppercase tracking-widest mb-3" style={{ color: "var(--flora-coral)" }}>Мы рядом</p>
@@ -429,19 +429,19 @@ const Index = () => {
               ))}
             </div>
 
-            <div className="bg-white rounded-3xl p-8 shadow-sm border border-pink-50">
+            <div className="bg-white rounded-3xl p-8 shadow-sm border border-green-50">
               <h3 className="font-display text-2xl font-bold text-gray-900 mb-6">Написать нам</h3>
               <div className="space-y-4">
                 <input
-                  className="w-full px-4 py-3 rounded-2xl border border-pink-100 focus:outline-none focus:border-pink-400 bg-pink-50/30 text-gray-800 placeholder-gray-400"
+                  className="w-full px-4 py-3 rounded-2xl border border-green-100 focus:outline-none focus:border-green-400 bg-green-50/30 text-gray-800 placeholder-gray-400"
                   placeholder="Ваше имя"
                 />
                 <input
-                  className="w-full px-4 py-3 rounded-2xl border border-pink-100 focus:outline-none focus:border-pink-400 bg-pink-50/30 text-gray-800 placeholder-gray-400"
+                  className="w-full px-4 py-3 rounded-2xl border border-green-100 focus:outline-none focus:border-green-400 bg-green-50/30 text-gray-800 placeholder-gray-400"
                   placeholder="Телефон или email"
                 />
                 <textarea
-                  className="w-full px-4 py-3 rounded-2xl border border-pink-100 focus:outline-none focus:border-pink-400 bg-pink-50/30 text-gray-800 placeholder-gray-400 h-28 resize-none"
+                  className="w-full px-4 py-3 rounded-2xl border border-green-100 focus:outline-none focus:border-green-400 bg-green-50/30 text-gray-800 placeholder-gray-400 h-28 resize-none"
                   placeholder="Ваше сообщение..."
                 />
                 <button className="w-full btn-primary py-3 rounded-2xl font-semibold text-base">
@@ -454,7 +454,7 @@ const Index = () => {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-8 text-center" style={{ background: "#1A0A12" }}>
+      <footer className="py-8 text-center" style={{ background: "#081c15" }}>
         <div className="flex items-center justify-center gap-2 mb-3">
           <span className="text-xl">🌸</span>
           <span className="font-display text-xl font-bold text-white">FloraPrime</span>
@@ -467,9 +467,9 @@ const Index = () => {
         <div className="fixed inset-0 z-50 flex justify-end">
           <div className="absolute inset-0 bg-black/40" onClick={() => setCartOpen(false)} />
           <div className="relative w-full max-w-md bg-white h-full flex flex-col shadow-2xl">
-            <div className="flex items-center justify-between p-6 border-b border-pink-100">
+            <div className="flex items-center justify-between p-6 border-b border-green-100">
               <h2 className="font-display text-2xl font-bold text-gray-900">Корзина</h2>
-              <button onClick={() => setCartOpen(false)} className="p-2 hover:bg-pink-50 rounded-full">
+              <button onClick={() => setCartOpen(false)} className="p-2 hover:bg-green-50 rounded-full">
                 <Icon name="X" size={20} className="text-gray-500" />
               </button>
             </div>
@@ -493,7 +493,7 @@ const Index = () => {
               ) : (
                 <div className="space-y-4">
                   {cart.map((item) => (
-                    <div key={item.id} className="flex items-center gap-4 bg-pink-50 rounded-2xl p-4">
+                    <div key={item.id} className="flex items-center gap-4 bg-green-50 rounded-2xl p-4">
                       <span className="text-3xl">{item.emoji}</span>
                       <div className="flex-1">
                         <div className="font-semibold text-gray-900">{item.name}</div>
@@ -510,7 +510,7 @@ const Index = () => {
             </div>
 
             {!orderPlaced && cart.length > 0 && (
-              <div className="p-6 border-t border-pink-100">
+              <div className="p-6 border-t border-green-100">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-gray-600">Итого:</span>
                   <span className="text-2xl font-bold grad-text">{totalPrice.toLocaleString()} ₽</span>
