@@ -4,60 +4,36 @@ import Icon from "@/components/ui/icon";
 const HERO_IMG = "https://cdn.poehali.dev/projects/a6c4d786-829a-4102-9fdb-c7248bc8cae4/files/ed96f816-48b0-4353-a740-12cf27017448.jpg";
 
 const PRODUCTS = [
-  {
-    id: 1,
-    name: "Розовая мечта",
-    desc: "Нежные пионовидные розы с эвкалиптом",
-    price: 3200,
-    emoji: "🌸",
-    tag: "Хит",
-    color: "from-pink-100 to-rose-50",
-  },
-  {
-    id: 2,
-    name: "Весенний бриз",
-    desc: "Тюльпаны, ранункулюс и веточки мимозы",
-    price: 2800,
-    emoji: "🌷",
-    tag: "Новинка",
-    color: "from-orange-100 to-yellow-50",
-  },
-  {
-    id: 3,
-    name: "Фиолетовый закат",
-    desc: "Лаванда, ирисы и статица",
-    price: 3600,
-    emoji: "💜",
-    tag: "",
-    color: "from-purple-100 to-violet-50",
-  },
-  {
-    id: 4,
-    name: "Белая роскошь",
-    desc: "Белые розы с гипсофилой премиум",
-    price: 4500,
-    emoji: "🤍",
-    tag: "Премиум",
-    color: "from-slate-100 to-gray-50",
-  },
-  {
-    id: 5,
-    name: "Коралловый рассвет",
-    desc: "Кустовые розы, хризантемы, зелень",
-    price: 2400,
-    emoji: "🧡",
-    tag: "",
-    color: "from-orange-100 to-red-50",
-  },
-  {
-    id: 6,
-    name: "Садовая история",
-    desc: "Полевые цветы в стиле бохо",
-    price: 2100,
-    emoji: "🌻",
-    tag: "Эко",
-    color: "from-green-100 to-emerald-50",
-  },
+  { id: 1,  name: "Букет «Нежность»",       desc: "Сборный букет с пионами, эвкалиптом и лентами",    price: 3200, emoji: "💐", category: "Букеты" },
+  { id: 2,  name: "Корзина «Лесная»",        desc: "Плетёная корзина с полевыми цветами и зеленью",    price: 4800, emoji: "🧺", category: "Корзины" },
+  { id: 3,  name: "Гортензия синяя",         desc: "Крупные шапки гортензии, 5 веток",                 price: 2600, emoji: "💙", category: "Гортензия" },
+  { id: 4,  name: "Пионы «Сад»",             desc: "Пышные белые и розовые пионы, 9 шт",               price: 3800, emoji: "🌸", category: "Пионы" },
+  { id: 5,  name: "Роза красная 60см",       desc: "Классические красные розы, длинный стебель",       price: 3500, emoji: "🌹", category: "Розы" },
+  { id: 6,  name: "Роза микс пастель",       desc: "Нежные пастельные розы 5 цветов, 15 шт",           price: 2900, emoji: "🌷", category: "Розы" },
+  { id: 7,  name: "Кустовая роза белая",     desc: "Белая кустовая роза, ветвистая, 7 шт",             price: 1800, emoji: "🤍", category: "Кустовая Роза" },
+  { id: 8,  name: "Кустовая роза персик",    desc: "Персиковый оттенок, пышное цветение",               price: 2100, emoji: "🧡", category: "Кустовая Роза" },
+  { id: 9,  name: "Хризантема шаровая",      desc: "Жёлтые шаровые хризантемы, букет 10 шт",           price: 1600, emoji: "🌼", category: "Хризантемы" },
+  { id: 10, name: "Хризантема кустовая",     desc: "Белая и лиловая кустовая хризантема",               price: 1400, emoji: "🌾", category: "Хризантемы" },
+  { id: 11, name: "Антуриум красный",        desc: "Экзотический антуриум, яркий акцент",               price: 2200, emoji: "🌺", category: "Экзотика" },
+  { id: 12, name: "Орхидея Дендробиум",      desc: "Элегантная белая орхидея на длинном стебле",        price: 3100, emoji: "🪷", category: "Экзотика" },
+  { id: 13, name: "Мишка плюшевый",          desc: "Мягкий медведь 40 см, идеально к букету",           price: 900,  emoji: "🧸", category: "Мягкие игрушки" },
+  { id: 14, name: "Зайчик с сердцем",        desc: "Плюшевый зайка с сердцем, 30 см",                  price: 750,  emoji: "🐰", category: "Мягкие игрушки" },
+  { id: 15, name: "Ранункулюс микс",         desc: "Яркие ранункулюсы 5 цветов, 10 шт",                price: 2400, emoji: "🌈", category: "Ранункулюсы" },
+  { id: 16, name: "Ранункулюс белый",        desc: "Нежные белые ранункулюсы, 7 шт",                   price: 1900, emoji: "⚪", category: "Ранункулюсы" },
+  { id: 17, name: "Эвкалипт",               desc: "Свежие ветки эвкалипта, пучок",                     price: 600,  emoji: "🌿", category: "Зелень" },
+  { id: 18, name: "Питтоспорум",             desc: "Декоративная зелень для букета, пучок",             price: 550,  emoji: "🍃", category: "Зелень" },
+  { id: 19, name: "Диантус розовый",         desc: "Гвоздика диантус, нежно-розовый, 10 шт",           price: 1200, emoji: "🌷", category: "Диантусы" },
+  { id: 20, name: "Диантус бордо",           desc: "Бордовый диантус, насыщенный цвет",                price: 1300, emoji: "🍷", category: "Диантусы" },
+  { id: 21, name: "Сет «Люкс»",             desc: "Розы, пионы, орхидея — всё в одном сете",           price: 8500, emoji: "👑", category: "Премиум Сеты" },
+  { id: 22, name: "Сет «Романтика»",         desc: "Красные розы, макаруны, свеча и открытка",          price: 6200, emoji: "💝", category: "Премиум Сеты" },
+  { id: 23, name: "Комплимент «Мини»",       desc: "Маленький букетик 5 цветков с лентой",              price: 650,  emoji: "🎀", category: "Комплименты" },
+  { id: 24, name: "Комплимент «Сюрприз»",    desc: "Бутоньерка + открытка ручной работы",              price: 850,  emoji: "💌", category: "Комплименты" },
+  { id: 25, name: "Ваза цилиндр стекло",     desc: "Прозрачная стеклянная ваза, 30 см",                price: 1100, emoji: "🏺", category: "Вазы" },
+  { id: 26, name: "Ваза керамика белая",     desc: "Матовая керамическая ваза, скандинавский стиль",   price: 1500, emoji: "🪔", category: "Вазы" },
+  { id: 27, name: "Упаковка крафт",          desc: "Крафтовая упаковка с лентой и тишью",              price: 300,  emoji: "📦", category: "Оформление Букета" },
+  { id: 28, name: "Коробка-сюрприз",         desc: "Шляпная коробка с наполнителем и декором",         price: 700,  emoji: "🎁", category: "Оформление Букета" },
+  { id: 29, name: "Лента атласная",          desc: "Атласная лента для завязки, 2 м",                  price: 120,  emoji: "🎗️", category: "Флористические материалы" },
+  { id: 30, name: "Флористическая пена",     desc: "Оазис для создания композиций, блок",              price: 250,  emoji: "🧽", category: "Флористические материалы" },
 ];
 
 const REVIEWS = [
@@ -80,14 +56,14 @@ const Index = () => {
   const [activeSection, setActiveSection] = useState("Главная");
   const [cart, setCart] = useState<CartItem[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
-  const [filter, setFilter] = useState("Все");
+  const [filter, setFilter] = useState("Все категории");
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const totalItems = cart.reduce((s, i) => s + i.qty, 0);
   const totalPrice = cart.reduce((s, i) => s + i.price * i.qty, 0);
 
-  const addToCart = (product: typeof PRODUCTS[0]) => {
+  const addToCart = (product: (typeof PRODUCTS)[0]) => {
     setCart((prev) => {
       const existing = prev.find((i) => i.id === product.id);
       if (existing) return prev.map((i) => i.id === product.id ? { ...i, qty: i.qty + 1 } : i);
@@ -112,8 +88,13 @@ const Index = () => {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
-  const filters = ["Все", "Хит", "Новинка", "Премиум", "Эко"];
-  const filtered = filter === "Все" ? PRODUCTS : PRODUCTS.filter((p) => p.tag === filter);
+  const filters = [
+    "Все категории", "Букеты", "Корзины", "Гортензия", "Пионы",
+    "Розы", "Кустовая Роза", "Хризантемы", "Экзотика", "Мягкие игрушки",
+    "Ранункулюсы", "Зелень", "Диантусы", "Премиум Сеты",
+    "Комплименты", "Вазы", "Оформление Букета", "Флористические материалы",
+  ];
+  const filtered = filter === "Все категории" ? PRODUCTS : PRODUCTS.filter((p) => p.category === filter);
 
   return (
     <div className="min-h-screen font-golos" style={{ background: "#FFFAF8" }}>
@@ -236,12 +217,12 @@ const Index = () => {
             <p className="text-gray-500 max-w-md mx-auto">Каждый букет — это история, рассказанная цветами</p>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
+          <div className="flex gap-2 mb-10 overflow-x-auto pb-2 scrollbar-hide" style={{ scrollbarWidth: "none" }}>
             {filters.map((f) => (
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap shrink-0 ${
                   filter === f
                     ? "grad-main text-white shadow-md"
                     : "bg-white text-gray-600 hover:text-green-700 border border-green-100 hover:border-green-300"
@@ -260,12 +241,10 @@ const Index = () => {
                 </div>
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-2">
-                    <h3 className="font-display text-2xl font-bold text-gray-900">{product.name}</h3>
-                    {product.tag && (
-                      <span className="ml-2 px-3 py-1 rounded-full text-xs font-semibold text-white grad-warm shrink-0">
-                        {product.tag}
-                      </span>
-                    )}
+                    <h3 className="font-display text-xl font-bold text-gray-900">{product.name}</h3>
+                    <span className="ml-2 px-3 py-1 rounded-full text-xs font-semibold shrink-0" style={{ background: "#e8f5ee", color: "#2d6a4f" }}>
+                      {product.category}
+                    </span>
                   </div>
                   <p className="text-sm text-gray-500 mb-5">{product.desc}</p>
                   <div className="flex items-center justify-between">
