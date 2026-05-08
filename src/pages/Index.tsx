@@ -462,7 +462,7 @@ const Index = () => {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="py-10 text-center" style={{ background: "#050505", borderTop: "1px solid rgba(201,168,76,0.12)" }}>
+      <footer className="py-10 text-center" style={{ background: "var(--black-deep)", borderTop: "1px solid rgba(201,168,76,0.18)" }}>
         <div className="flex items-center justify-center gap-2 mb-3">
           <span>🌸</span>
           <span className="font-display text-lg tracking-wider" style={{ color: "var(--gold)" }}>FloraPrime</span>
@@ -476,7 +476,7 @@ const Index = () => {
       {/* ── CART DRAWER ── */}
       {cartOpen && (
         <div className="fixed inset-0 z-50 flex justify-end">
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={() => setCartOpen(false)} />
+          <div className="absolute inset-0 backdrop-blur-sm" style={{ background: "rgba(30,25,20,0.75)" }} onClick={() => setCartOpen(false)} />
           <div className="relative w-full max-w-md h-full flex flex-col shadow-2xl"
             style={{ background: "var(--black-card)", borderLeft: "1px solid rgba(201,168,76,0.2)" }}>
 
