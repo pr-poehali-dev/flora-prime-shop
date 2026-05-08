@@ -4,56 +4,59 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 330 15% 12%;
+    --background: 0 0% 6%;
+    --foreground: 45 20% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 330 15% 12%;
+    --card: 0 0% 9%;
+    --card-foreground: 45 20% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 330 15% 12%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 45 20% 90%;
 
-    --primary: 150 60% 22%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 43 74% 52%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 140 40% 35%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 45 20% 85%;
 
-    --muted: 140 20% 95%;
-    --muted-foreground: 140 10% 45%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 80 60% 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 43 74% 52%;
+    --accent-foreground: 0 0% 5%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 140 20% 88%;
-    --input: 140 20% 88%;
-    --ring: 150 60% 22%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 43 74% 52%;
 
-    --radius: 1rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 45 20% 80%;
+    --sidebar-primary: 43 74% 52%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 0 0% 12%;
+    --sidebar-accent-foreground: 45 20% 80%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 43 74% 52%;
 
-    /* FloraPrime brand */
-    --flora-coral: #2d6a4f;
-    --flora-pink: #1b4332;
-    --flora-purple: #40916c;
-    --flora-violet: #1b4332;
-    --flora-orange: #74c69d;
-    --flora-dark: #081c15;
-    --flora-light: #f0faf4;
-    --grad-main: linear-gradient(135deg, #2d6a4f 0%, #40916c 50%, #74c69d 100%);
-    --grad-warm: linear-gradient(135deg, #74c69d 0%, #2d6a4f 100%);
-    --grad-cool: linear-gradient(135deg, #1b4332 0%, #40916c 100%);
+    /* FloraPrime Luxury */
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --gold-dark: #8a6820;
+    --black-deep: #0a0a0a;
+    --black-rich: #111111;
+    --black-card: #181818;
+    --black-hover: #1f1f1f;
+    --white-soft: #f5f0e8;
+    --white-muted: #a89880;
+    --grad-main: linear-gradient(135deg, #8a6820 0%, #c9a84c 50%, #e8c97a 100%);
+    --grad-warm: linear-gradient(135deg, #c9a84c 0%, #e8c97a 100%);
+    --grad-cool: linear-gradient(135deg, #8a6820 0%, #c9a84c 100%);
+    --grad-dark: linear-gradient(180deg, #0a0a0a 0%, #181818 100%);
   }
 }
 
@@ -63,7 +66,8 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    background: var(--black-deep);
+    color: var(--white-soft);
     font-family: "Golos Text", sans-serif;
   }
 
@@ -96,41 +100,86 @@
     background-clip: text;
   }
 
-  .card-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  .gold-text {
+    color: var(--gold);
   }
 
-  .card-hover:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 60px rgba(45, 106, 79, 0.2);
+  .gold-border {
+    border-color: var(--gold-dark);
+  }
+
+  .card-luxury {
+    background: var(--black-card);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-luxury:hover {
+    border-color: rgba(201, 168, 76, 0.5);
+    transform: translateY(-4px);
+    box-shadow:
+      0 24px 60px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(201, 168, 76, 0.2);
   }
 
   .glass {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(10, 10, 10, 0.88);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.12);
   }
 
-  .glass-dark {
-    background: rgba(8, 28, 21, 0.7);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+  .glass-card {
+    background: rgba(24, 24, 24, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   .btn-primary {
     background: var(--grad-main);
-    color: white;
+    color: #0a0a0a;
+    font-weight: 600;
     border: none;
     transition: all 0.3s ease;
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 30px rgba(45, 106, 79, 0.4);
+    box-shadow: 0 10px 32px rgba(201, 168, 76, 0.35);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid rgba(201, 168, 76, 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .btn-outline:hover {
+    background: rgba(201, 168, 76, 0.08);
+    border-color: var(--gold);
+  }
+
+  .divider-gold {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--gold-dark),
+      transparent
+    );
   }
 
   .section-pad {
-    padding: 80px 0;
+    padding: 96px 0;
+  }
+
+  .section-dark {
+    background: var(--black-rich);
+  }
+
+  .section-deeper {
+    background: var(--black-deep);
   }
 
   .animate-delay-100 {
@@ -147,5 +196,18 @@
   }
   .animate-delay-500 {
     animation-delay: 0.5s;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #111;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold-dark);
+    border-radius: 2px;
   }
 }
